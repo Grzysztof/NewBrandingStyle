@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 
 namespace Wsei.ExchangeThings.Web
 {
@@ -23,6 +24,7 @@ namespace Wsei.ExchangeThings.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<Database.ExchangesDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ExchangeThings")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
