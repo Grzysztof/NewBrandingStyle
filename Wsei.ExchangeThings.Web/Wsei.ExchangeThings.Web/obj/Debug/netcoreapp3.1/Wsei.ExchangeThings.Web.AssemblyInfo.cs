@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("dd86b4ef-aded-494b-ac8a-47dc70cb05aa")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wsei.ExchangeThings.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
